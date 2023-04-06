@@ -40,7 +40,7 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ### Instrument description
 
-- SMAP was launched in January 2015 and started operation in April 2015. The radar instrument, ceasing operation in early 2015 due to failure of radar power supply, collected close to 3 months of science data. The passive radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
+- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
  
  
         | Frequency | Polarization           | Resolution                    | Relative accuracy |
