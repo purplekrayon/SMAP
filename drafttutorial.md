@@ -67,7 +67,7 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 - All types of soil emit microwave radiation, but the amount of water changes how much of this energy is emitted. 
 - The drier the soil, the more microwave energy; the wetter the soil, the less energy. 
 - Radiometers measure this radiation, and scientists use the data to calculate water content.  
-- SMAP measures radiation in the L-band microwave frequency. This wavelength of energy penetrates clouds, so SMAP can measure soil moisture regardless of cloudy conditions.
+- SMAP measures radiation in the L-band microwave wavelength (30-15 cm wavelenght with 1-2 Ghz frequency). This wavelength of energy penetrates clouds, so SMAP can measure soil moisture regardless of cloudy conditions.
 
 <img src="https://www.earthdata.nasa.gov/s3fs-public/styles/medium_half_480px_/public/imported/SARticle_microwave_fig-05.jpg?VersionId=grvQvo62ExpiaB991_Eca34VboLucBTj&itok=rBjIRVpJ">
 
