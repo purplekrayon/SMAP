@@ -34,25 +34,30 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ## Soil Mositure Active Passive (SMAP)
 
-- Mission objective
-    - The SMAP mission is an orbiting observatory that measures the amount of water in the surface soil everywhere on Earth. The prime mission phase of three years was completed in 2018, and since then SMAP has been in extended operation phase.
-- Instrument description
-    -  SMAP was launched in January 2015 and started operation in April 2015. The radar instrument, ceasing operation in early 2015 due to failure of radar power supply, collected close to 3 months of science data. The passive radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
+### Mission objective
+    
+- The SMAP mission is an orbiting observatory that measures the amount of water in the surface soil everywhere on Earth. The prime mission phase of three years was completed in 2018, and since then SMAP has been in extended operation phase.
+
+### Instrument description
+
+- SMAP was launched in January 2015 and started operation in April 2015. The radar instrument, ceasing operation in early 2015 due to failure of radar power supply, collected close to 3 months of science data. The passive radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
  
  
-        | Frequency | Polarization            | Resolution                    | Relative accuracy |
+        | Frequency | Polarization           | Resolution                    | Relative accuracy |
         |-----------|------------------------|-------------------------------|-------------------|
         | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km orignial, 9-km enhanced | 1.3 K             |
 
-        [![Animation that shows how SMAP gathers data](https://smap.jpl.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ff707053f56355e399a893f09a179cab86e66d/SMAP_Animation_Gathering_Data_large.jpg?disposition=attachment)](https://www.youtube.com/watch?v=GAilsFVPmP4)
+[![Animation that shows how SMAP gathers data](https://smap.jpl.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ff707053f56355e399a893f09a179cab86e66d/SMAP_Animation_Gathering_Data_large.jpg?disposition=attachment)](https://www.youtube.com/watch?v=GAilsFVPmP4)
         
-        Click on the image above to watch an animation on how SMAP gathers data. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
+Click on the image above to watch an animation on how SMAP gathers data. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
 
-- Passive Microwave Concepts
-- What does SMAP measure?
-    - SMAP measures soil moisture, every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons.
-    - SMAP measures how much water is in the top layer of soil everywhere on Earth not covered with water or not frozen. It also distinguishes between ground that is frozen or thawed. 
-    - Where the ground is not frozen, SMAP measures the amount of water found between the minerals, rocky material, and organic particles found in soil everywhere in the world (SMAP measures liquid water in the top layer of ground but is not able to measure the ice.)
+### Passive Microwave Concepts
+
+### What does SMAP measure?
+
+- SMAP measures soil moisture, every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons.
+- SMAP measures how much water is in the top layer of soil everywhere on Earth not covered with water or not frozen. It also distinguishes between ground that is frozen or thawed. 
+- Where the ground is not frozen, SMAP measures the amount of water found between the minerals, rocky material, and organic particles found in soil everywhere in the world (SMAP measures liquid water in the top layer of ground but is not able to measure the ice.)
 
 
 ## SMAP products in GEE
@@ -73,7 +78,7 @@ There are three different SMAP products availailable in the catalog.
         |---------------------|---------------------|--------------------------------|
         | daily               | 11 km               | March 31, 2015 - present       |
     - SMAP L4 provides uninterrupted soil moisture data.  During outages of the SMAP instrument, SMAP L4 soil moisture is based on land model simulations alone, without the concomitant assimilation of SMAP brightness temperature observations.  Significant SMAP instrument outages occurred between 19 June and 23 July 2019 and between 6 August and 20 September 2022.
-    -  
+
 3.  [NASA-USDA Enhanced SMAP](NASA_USDA_HSL_SMAP10KM_soil_moisture)
     - The NASA-USDA Enhanced SMAP global soil moisture data provides soil moisture information across the globe at 10-km spatial resolution. This dataset includes: surface and subsurface soil moisture (mm), soil moisture profile (%), as well as surface and subsurface soil moisture anomalies (-).
     - The dataset is generated by integrating satellite-derived Soil Moisture Active Passive (SMAP) Level 2 soil moisture observations into the modified two-layer Palmer model using a 1-D Ensemble Kalman Filter (EnKF) data assimilation approach. Soil moisture anomalies were computed from the climatology of the day of interest. The climatology was estimated based on the full data record of the SMAP satellite observation and the 31-day-centered moving-window approach. The assimilation of the SMAP soil moisture observations help improve the model-based soil moisture predictions particularly over poorly instrumented areas of the world that lack good quality precipitation data.
@@ -98,15 +103,16 @@ Band description                 | [NASA-USDA Enhanced SMAP](NASA_USDA_HSL_SMAP1
 
 In this section, you will learn ways to visualize SMAP in GEE based on your level of experience with the code editor.
 
-EASY: This first option does not require coding expertise. You can access the [SMAP visualization application (beta)](https://krayon.users.earthengine.app/view/soil-moisture-active-passive-smap) 
+### EASY
+This first option does not require coding expertise. You can access the [SMAP visualization application (beta)](https://krayon.users.earthengine.app/view/soil-moisture-active-passive-smap) 
 
-BEGINNER:
+### BEGINNER
 
 ```js
 // This code selects the Soil Moisture AM band from L3 SMAP Global soil moisture data 
 ```
 
-INTERMEDIATE:
+### INTERMEDIATE
 
 ```js
 // This code selects the Soil Moisture AM band from L3 SMAP Global soil moisture data 
