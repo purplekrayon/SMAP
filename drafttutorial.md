@@ -69,7 +69,7 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 - Radiometers measure this radiation, and scientists use the data to calculate water content.  
 - SMAP measures radiation in the L-band microwave frequency. This wavelength of energy penetrates clouds, so SMAP can measure soil moisture regardless of cloudy conditions.
 
-<img src="https://smd-prod.s3.amazonaws.com/science-red/s3fs-public/thumbnails/image/EMS-Introduction.jpeg">
+<img src="https://www.earthdata.nasa.gov/s3fs-public/styles/medium_half_480px_/public/imported/SARticle_microwave_fig-05.jpg?VersionId=grvQvo62ExpiaB991_Eca34VboLucBTj&itok=rBjIRVpJ">
 
 ## SMAP products in GEE
 
