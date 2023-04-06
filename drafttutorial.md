@@ -40,7 +40,9 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ### Instrument description
 
-- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) local solar time for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
+- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) local solar time for complete global coverage every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons. 
+
+- The radiometer specifications are described in the table below.
  
  
     | Frequency | Polarization           | Resolution                    | Relative accuracy |
@@ -55,7 +57,6 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 
 ### What does SMAP measure?
 
-- SMAP measures soil moisture, every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons.
 - SMAP measures how much water is in the top layer (5 cm) of soil everywhere on Earth not covered with water or not frozen. It also distinguishes between ground that is frozen or thawed. 
 - Where the ground is not frozen, SMAP measures the amount of water found between the minerals, rocky material, and organic particles found in soil everywhere in the world
 -  SMAP measures liquid water in the top layer of ground but is not able to measure the ice.
