@@ -40,7 +40,7 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ### Instrument description
 
-- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
+- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) local solar time for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
  
  
     | Frequency | Polarization           | Resolution                    | Relative accuracy |
@@ -75,7 +75,8 @@ There are three different SMAP products availailable in the catalog.
 
 
 1.  [SPL3SMP_E.005 Level 3 product](NASA_SMAP_SPL3SMP_E_005) 
-    - This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.
+    - This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. 
+   
         | temporal resolution | gridded resolutions | availability                   |
         |---------------------|---------------------|--------------------------------|
         | daily               | 9 km                | March 31, 2015 - present       |
