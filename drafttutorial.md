@@ -36,29 +36,38 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ### Mission objective
     
-- The SMAP mission is an orbiting observatory that measures the amount of water in the surface soil everywhere on Earth. The prime mission phase of three years was completed in 2018, and since then SMAP has been in extended operation phase.
+- The SMAP mission is an orbiting observatory that measures the amount of water in the surface soil everywhere on Earth. Soil moisture is an important measurement for weather forecasting, drought and flood predictions, agriculture, and more.
 
 ### Instrument description
 
 - SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) for complete global coverage every 2-3 days. The radiometer specifications are described in the table below.
  
  
-        | Frequency | Polarization           | Resolution                    | Relative accuracy |
-        |-----------|------------------------|-------------------------------|-------------------|
-        | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km orignial, 9-km enhanced | 1.3 K             |
+    | Frequency | Polarization           | Resolution                    | Relative accuracy |
+    |-----------|------------------------|-------------------------------|-------------------|
+    | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km orignial, 9-km enhanced | 1.3 K             |
+
+- SMAP's radiometer collects naturally emitted energy from the surface with a 20-foot-wide mesh antenna that rotates 14 times per minute – the largest such spinning antenna in space. 
 
 [![Animation that shows how SMAP gathers data](https://smap.jpl.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ff707053f56355e399a893f09a179cab86e66d/SMAP_Animation_Gathering_Data_large.jpg?disposition=attachment)](https://www.youtube.com/watch?v=GAilsFVPmP4)
         
 Click on the image above to watch an animation on how SMAP gathers data. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
 
-### Passive Microwave Concepts
-
 ### What does SMAP measure?
 
 - SMAP measures soil moisture, every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons.
-- SMAP measures how much water is in the top layer of soil everywhere on Earth not covered with water or not frozen. It also distinguishes between ground that is frozen or thawed. 
-- Where the ground is not frozen, SMAP measures the amount of water found between the minerals, rocky material, and organic particles found in soil everywhere in the world (SMAP measures liquid water in the top layer of ground but is not able to measure the ice.)
+- SMAP measures how much water is in the top layer (5 cm) of soil everywhere on Earth not covered with water or not frozen. It also distinguishes between ground that is frozen or thawed. 
+- Where the ground is not frozen, SMAP measures the amount of water found between the minerals, rocky material, and organic particles found in soil everywhere in the world
+-  SMAP measures liquid water in the top layer of ground but is not able to measure the ice.
 
+### How does SMAP measure soil moisture?
+
+- All types of soil emit microwave radiation, but the amount of water changes how much of this energy is emitted. 
+- The drier the soil, the more microwave energy; the wetter the soil, the less energy. 
+- Radiometers measure this radiation, and scientists use the data to calculate water content.  
+- SMAP measures radiation in the L-band microwave frequency. This wavelength of energy penetrates clouds, so SMAP can measure soil moisture regardless of cloudy conditions.
+
+<img src="https://smd-prod.s3.amazonaws.com/science-red/s3fs-public/thumbnails/image/EMS-Introduction.jpeg">
 
 ## SMAP products in GEE
 
