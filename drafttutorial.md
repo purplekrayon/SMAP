@@ -89,7 +89,7 @@ There are three different SMAP products availailable in the catalog.
     - The SMAP Level-4 (L4) Soil Moisture product includes surface soil moisture (0-5 cm vertical average), root-zone soil moisture (0-100 cm vertical average), and additional research products (not validated), including surface meteorological forcing variables, soil temperature, evapotranspiration, and net radiation.
         | temporal resolution | gridded resolutions | availability                   | uses         |
         |---------------------|---------------------|--------------------------------|---------------|
-        | daily               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and/or root zone soil moisture with full global coverage and no data gaps and high temporal frequency. These modeled data can be used over all land cover types except now and ice. |
+        | daily               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and root zone soil moisture with full global coverage and no data gaps and high temporal frequency. These modeled data can be used over all land cover types except now and ice. |
         
     - SMAP L4 provides uninterrupted soil moisture data.  During outages of the SMAP instrument, SMAP L4 soil moisture is based on land model simulations alone, without the concomitant assimilation of SMAP brightness temperature observations.  Significant SMAP instrument outages occurred between 19 June and 23 July 2019 and between 6 August and 20 September 2022.
 
@@ -100,7 +100,7 @@ There are three different SMAP products availailable in the catalog.
     
         | temporal resolution | gridded resolutions | availability                   | uses  |
         |---------------------|---------------------|--------------------------------|---------|
-        | daily               | 10 km               | April 2, 2015 - August 2, 2022 | Modeled surface and/or root zone soil moisture from the USDA-FAS Palmer model for agricultural drought monitoring |
+        | daily               | 10 km               | April 2, 2015 - August 2, 2022 | Modeled surface and root zone soil moisture from the USDA-FAS Palmer model for agricultural drought monitoring |
        
      - As of August 2022, the NASA-USDA Enhanced SMAP Global soil moisture product has been discontinued. 
 
