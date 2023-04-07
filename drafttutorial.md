@@ -53,6 +53,7 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 - SMAP's radiometer collects naturally emitted energy from the surface with a 20-foot-wide mesh antenna that rotates 14 times per minute – the largest such spinning antenna in space. 
 
 [![Animation that shows how SMAP gathers data](https://smap.jpl.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1ff707053f56355e399a893f09a179cab86e66d/SMAP_Animation_Gathering_Data_large.jpg?disposition=attachment)](https://www.youtube.com/watch?v=GAilsFVPmP4)   
+
 Click on the image above to watch an animation on how SMAP gathers data. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
 
 ### What does SMAP measure?
@@ -69,6 +70,7 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 - SMAP measures radiation in the L-band microwave wavelength (30-15 cm & 1-2 Ghz frequency). This wavelength of energy penetrates clouds, so SMAP can measure soil moisture regardless of cloudy conditions.
 
 [![video of how SMAP measures soil moisture](https://www.earthdata.nasa.gov/s3fs-public/styles/medium_half_480px_/public/imported/SARticle_microwave_fig-05.jpg?VersionId=grvQvo62ExpiaB991_Eca34VboLucBTj&itok=rBjIRVpJ)](https://youtu.be/AuO0pH-1JYg)
+
 Click on the image above to watch a video on how SMAP measures soil moisture. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
 
 
