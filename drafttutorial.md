@@ -81,7 +81,7 @@ There are three different SMAP products availailable in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | Surface soil moisture estimates directly from the radiometer. These estimates are highly accurate measures over sparsely vegetated areas and grasslands. They have lower accuracy over densely vegetated areas which can be masked our using the data quality flags. |
+        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product is highly accurate  over sparsely vegetated areas and grasslands. This product has lower accuracy over densely forested areas due to the attenuation of soil-emmitted radiation by vegetation.|
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
