@@ -71,7 +71,7 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 
 [![video of how SMAP measures soil moisture](https://www.earthdata.nasa.gov/s3fs-public/styles/medium_half_480px_/public/imported/SARticle_microwave_fig-05.jpg?VersionId=grvQvo62ExpiaB991_Eca34VboLucBTj&itok=rBjIRVpJ)](https://youtu.be/AuO0pH-1JYg)
 
-Click on the image above to watch a video on how SMAP measures soil moisture. [https://youtu.be/GAilsFVPmP4](https://youtu.be/GAilsFVPmP4)
+Click on the image above to watch a video on how SMAP measures soil moisture. [https://youtu.be/AuO0pH-1JYg](https://youtu.be/AuO0pH-1JYg)
 
 
 ## SMAP products in GEE
