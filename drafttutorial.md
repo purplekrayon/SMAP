@@ -217,7 +217,9 @@ var exportParams = {scale: 10000, region: country, crs: 'EPSG:3857'};
 Export.image(SM_masked_MEAN, 'SM_MaskedJuly2022MEAN_URY', exportParams);
 Export.image(SM_MEAN, 'SM_July2022MEAN_URY', exportParams);
 ```
-## Plotting a time series of daily soil moisture
+### ADVANCED
+
+Plotting a time series of daily soil moisture
 
 Use separate sections for related, but discrete, groups of steps.
 
