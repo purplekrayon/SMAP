@@ -84,7 +84,7 @@ There are three different SMAP products available in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product is highly accurate  over sparsely vegetated areas and grasslands. This product has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation.|
+        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product has highy accuracy  over sparsely vegetated areas and grasslands, but has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation. These areas can be masked using the retrieval quality flag bands. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -111,10 +111,10 @@ The table below describes the surface soil moisture, root-zone soil moisture, an
 
 Band description                 | [NASA-USDA Enhanced SMAP](NASA_USDA_HSL_SMAP10KM_soil_moisture) | [SPL4SMGP.007](NASA_SMAP_SPL4SMGP_007) | [SPL3SMP_E.005](NASA_SMAP_SPL3SMP_E_005)               |
 |----------------------------------|-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------------|
-| Surface soil moisture            | ssm                                                             | sm_surface                             | soil_moisture_am,<br> soil_moisture_pm                 |
+| Surface soil moisture            | ssm                                                             | sm_surface                             | soil_moisture_am <br> soil_moisture_pm                 |
 | Subsurface soil moisture         | susm                                                            | sm_rootzone                            | NA                                                     |
 | Soil moisture profile            | smp                                                             | sm_profile                             | sm_profile                                             |
-| Surface soil moisture anomaly    | ssma                                                            | sm_surface_anomaly                     | soil_moisture_am_anomaly,<br> soil_moisture_pm_anomaly |
+| Surface soil moisture anomaly    | ssma                                                            | sm_surface_anomaly                     | soil_moisture_am_anomaly <br> soil_moisture_pm_anomaly |
 | Subsurface soil moisture anomaly | susma                                                           | NA                                     | NA                                                     |
 
 ## Visualizing SMAP
@@ -127,7 +127,31 @@ This first option does not require coding expertise. You can access the [SMAP vi
 ### BEGINNER
 
 ```js
-// This code selects the Soil Moisture AM band from L3 SMAP Global soil moisture data 
+//View a single day of SMAP L3 data for both ascending and descending overpasses   
+//Change date in line below to see the SMAP L3 image for that day
+var dataset = ee.ImageCollection('NASA/SMAP/SPL3SMP_E/005')
+                  .filter(ee.Filter.date('2023-04-05'));
+
+//select descending pass of instrument (am)
+var soilMoistureSurfaceAM = dataset.select('soil_moisture_am');
+//print collection properties to console for inspection
+print(soilMoistureSurfaceAM)
+
+//select ascending pass of instrument (pm)
+var soilMoistureSurfacePM = dataset.select('soil_moisture_pm');
+//print collection properties to console for inspection
+print(soilMoistureSurfaceAM)
+
+//set visualization parameters
+var soilMoistureVis = {
+  min: 0.0,
+  max: 0.6,
+  palette: ['fC6238','FFEC59','8DD7BF' ,'00B0BA','0065A2'],
+};
+//set map center [lat,lon] and zoom scale [n]
+Map.setCenter(-6.746, 46.529, 2);
+Map.addLayer(soilMoistureSurfaceAM, soilMoistureVis, 'Soil Moisture AM');
+Map.addLayer(soilMoistureSurfacePM, soilMoistureVis, 'Soil Moisture PM');
 ```
 
 ### INTERMEDIATE
