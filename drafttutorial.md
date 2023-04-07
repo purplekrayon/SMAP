@@ -30,9 +30,9 @@ The learning objectives of this tutorial are:
 - visualize SMAP by adding visualization parameters
 - plot a time series of SMAP soil moisture for a point geometry
 
-After completing this tutorial, you will be able to choose the optimal SMAP product for your analysis/applicaiton. And you will be able to import, vizualize, and analyze a time series of SMAP soil moisture data in Google Earth Engine.
+After completing this tutorial, you will be able to choose the optimal SMAP product for your analysis/application. And you will be able to import, visualize, and analyze a time series of SMAP soil moisture data in Google Earth Engine.
 
-## Soil Mositure Active Passive (SMAP)
+## Soil Moisture Active Passive (SMAP)
 
 ### Mission objective
     
@@ -40,14 +40,14 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
 
 ### Instrument description
 
-- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument, ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) local solar time for complete global coverage every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons. 
+- SMAP was launched in January 2015 and started operation in April 2015 with two instruments onboard to measure soil moisture, an active radar and a passive radiometer. The radar instrument ceased operation in early 2015 due to failure of radar power supply, but collected close to 3 months of science data that are available from the [Alaska Satellite Facility](https://asf.alaska.edu/). The passive L-band radiometer collects daily data at 6 am (descending) and 6 pm (ascending) local solar time for complete global coverage every 2-3 days. This permits changes, around the world, to be observed over time scales ranging from major storms to repeated measurements of changes over the seasons. 
 
 - The radiometer specifications are described in the table below.
  
  
     | Frequency | Polarization           | Resolution                    | Relative accuracy |
     |-----------|------------------------|-------------------------------|-------------------|
-    | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km orignial, 9-km enhanced | 1.3 K             |
+    | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km original, 9-km enhanced | 1.3 K             |
 
 
 - SMAP's radiometer collects naturally emitted energy from the surface with a 20-foot-wide mesh antenna that rotates 14 times per minute – the largest such spinning antenna in space. 
@@ -73,7 +73,7 @@ Click on the image above to watch an animation on how SMAP gathers data. [https:
 
 ## SMAP products in GEE
 
-There are three different SMAP products availailable in the catalog.
+There are three different SMAP products available in the catalog.
 
 
 1.  [SPL3SMP_E.005 Level 3 product](NASA_SMAP_SPL3SMP_E_005) 
@@ -81,7 +81,7 @@ There are three different SMAP products availailable in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product is highly accurate  over sparsely vegetated areas and grasslands. This product has lower accuracy over densely forested areas due to the attenuation of soil-emmitted radiation by vegetation.|
+        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product is highly accurate  over sparsely vegetated areas and grasslands. This product has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation.|
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -104,7 +104,7 @@ There are three different SMAP products availailable in the catalog.
        
      - As of August 2022, the NASA-USDA Enhanced SMAP Global soil moisture product has been discontinued. 
 
-The table below describes the surface soil moisture, root-zone soil moisture, and soil moisture anonaly bands available with each product.
+The table below describes the surface soil moisture, root-zone soil moisture, and soil moisture anomaly bands available with each product.
 
 Band description                 | [NASA-USDA Enhanced SMAP](NASA_USDA_HSL_SMAP10KM_soil_moisture) | [SPL4SMGP.007](NASA_SMAP_SPL4SMGP_007) | [SPL3SMP_E.005](NASA_SMAP_SPL3SMP_E_005)               |
 |----------------------------------|-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------------|
