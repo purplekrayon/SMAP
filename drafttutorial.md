@@ -157,54 +157,65 @@ Map.addLayer(soilMoistureSurfacePM, soilMoistureVis, 'Soil Moisture PM');
 ### INTERMEDIATE
 
 ```js
-// This code selects the Soil Moisture AM band from L3 SMAP Global soil moisture data 
-// 1) masks the data with the retrieval quality flag.
+// This code selects the Soil Moisture AM band from L3 SMAP global soil moisture data 
+// 1) masks the data with the retrieval quality flag
 // 2) computes a mean image from multiple images in a series 
+// 3) Clips results to country boundary
+// 4) Exports data to GeoTiff
 
-//Import county polygons by ISO code
-//This example uses Tanzania
-var iso_code ='TZA'
+//Import county polygons by ISO Alpha-3 code
+//This example uses the Uruguay
+var iso_code ='URY'
 var country = ee.FeatureCollection("USDOS/LSIB/2013").filter(ee.Filter.eq('iso_alpha3', iso_code));
 var SMAPL3 = ee.ImageCollection(ee.ImageCollection("NASA/SMAP/SPL3SMP_E/005"))
-print(SMAPL3)
+//print collection properties to console for inspection
+print(SMAPL3);
+
 //select 1 month of SMAP images to create mean composite
+//Remember SMAP L3 data are unavailable for the following dates: 
+//June 19-July 23, 2019 and September 20-October 6th, 2022
 var dataset = SMAPL3.filter(ee.Filter.date('2022-07-01','2022-07-31'));
 var soilMoisture = dataset.select('soil_moisture_am');
-//set vizualization parameters for median image
+
+//set visualization parameters for mean image
 var soilMoistureVis = {
   min: 0.0,
   max: 0.6,
-  //palette: ['ff0303','efff07','8DD7BF' ,'00B0BA','0065A2'],
   palette: ['fC6238','FFEC59','8DD7BF' ,'00B0BA','0065A2'],
 };
-Map.setCenter(25, -10.00, 4);
+//set map center [lat,lon] and zoom scale [n]
+Map.centerObject(country, 4);
+
 //select AM soil moisture
 var soilmoisture_am = dataset.select('soil_moisture_am').toBands();
 var SM_MEAN = soilmoisture_am.reduce(ee.Reducer.mean());
+
 //select QA values
 var soilmoisture_am_qamask = dataset.select('retrieval_qual_flag_am').toBands();
+
 //invert QA values to create mask
 var QA_mask = soilmoisture_am_qamask.eq(0);  
+
 //add QA mask to soil moisture
 var SM_masked = soilmoisture_am.updateMask(QA_mask);
-//reduce image stack to single image with median reducer
+
+//reduce image stack to single image with mean reducer
 var SM_masked_MEAN = SM_masked.reduce(ee.Reducer.mean());
-//Visualize Soil Moisture (cm3/cm3)*1000
-Map.addLayer(SM_masked_MEAN, soilMoistureVis, 'Soil Mean Moisture Masked');
-Map.addLayer(SM_MEAN, soilMoistureVis, 'Soil Mean Moisture');
-//select this option to clip map to Tanzania
-//Map.addLayer(SM_median.clip(country), soilMoistureVis, 'Soil Moisture Mean');
+
+//Visualize Soil Mean Moisture global (cm3/cm3)*1000
+//Map.addLayer(SM_masked_MEAN, soilMoistureVis, 'Mean Soil Moisture Masked');
+//Map.addLayer(SM_MEAN, soilMoistureVis, 'Mean Soil Moisture');
+
+//select this option to clip map to Uruguay (cm3/cm3)*1000
+Map.addLayer(SM_MEAN.clip(country), soilMoistureVis, 'Mean Soil Moisture');
+Map.addLayer(SM_masked_MEAN.clip(country), soilMoistureVis, 'Mean Soil Moisture Masked');
 
 // Export with maps Mercator projection at 10 km scale.
 var exportParams = {scale: 10000, region: country, crs: 'EPSG:3857'};
-//create export task and go to Tasks tab to run
-Export.image(SM_masked_MEAN, 'SM_MaskedJuly2022MEAN_TZA', exportParams);
-
-
-// Export with maps Mercator projection at 10 km scale.
-var exportParams = {scale: 10000, crs: 'EPSG:3857'};
-//create export task and go to Tasks tab to run
-Export.image(SM_MEAN, 'SM_July2022MEAN', exportParams);
+//create export task and go to tasks tab to run
+//set output file names
+Export.image(SM_masked_MEAN, 'SM_MaskedJuly2022MEAN_URY', exportParams);
+Export.image(SM_MEAN, 'SM_July2022MEAN_URY', exportParams);
 ```
 ## Plotting a time series of daily soil moisture
 
