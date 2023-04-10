@@ -23,7 +23,7 @@ limitations under the License.
 <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/278842550_300195778957924_8093208601931649083_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=j81nUaBLNkIAX9ep93I&_nc_ht=scontent-atl3-1.xx&oh=00_AfAD1KUqM47GwXtUiS_Btc-KzTG10db2bfv2-jhNBrPBlQ&oe=6434DB2C" >
 The thematic focus is learning about the SMAP instrument for applications water resources management applications.
 
-The learning objectives of this tutorial are:
+The learning objectives of this tutorial are to:
 - understand how SMAP measures soil moisture from space
 - know which SMAP products are available in GEE catalog and the differences between the products
 - know how to import SMAP products into the code editor
@@ -84,7 +84,7 @@ There are three different SMAP products available in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy of estimating soil moisture (within 4%). The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
+        | Daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy of estimating soil moisture (within 4%). The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -92,7 +92,7 @@ There are three different SMAP products available in the catalog.
     - The SMAP Level-4 (L4) Soil Moisture product includes surface soil moisture (0-5 cm vertical average), root-zone soil moisture (0-100 cm vertical average), and additional research products (not validated), including surface meteorological forcing variables, soil temperature, evapotranspiration, and net radiation.
         | temporal resolution | gridded resolutions | availability                   | uses         |
         |---------------------|---------------------|--------------------------------|---------------|
-        | daily               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and root zone soil moisture with full global coverage and no data gaps and high temporal frequency. |
+        | 3-hourly               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and root zone soil moisture with full global coverage and no data gaps and high temporal frequency. |
         
     - SMAP L4 provides uninterrupted soil moisture data.  During outages of the SMAP instrument, SMAP L4 soil moisture is based on land model simulations alone, without the concomitant assimilation of SMAP brightness temperature observations.  Significant SMAP instrument outages occurred between 19 June and 23 July 2019 and between 6 August and 20 September 2022.
 
@@ -103,7 +103,7 @@ There are three different SMAP products available in the catalog.
     
         | temporal resolution | gridded resolutions | availability                   | uses  |
         |---------------------|---------------------|--------------------------------|---------|
-        | daily               | 10 km               | April 2, 2015 - August 2, 2022 | Modeled surface and root zone soil moisture from the USDA-FAS Palmer model for agricultural drought monitoring |
+        | Daily               | 10 km               | April 2, 2015 - August 2, 2022 | Modeled surface and root zone soil moisture from the USDA-FAS Palmer model for agricultural drought monitoring |
        
      - As of August 2022, the NASA-USDA Enhanced SMAP Global soil moisture product has been discontinued. 
 
