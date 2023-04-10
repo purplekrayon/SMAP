@@ -82,9 +82,9 @@ There are three different SMAP products available in the catalog.
 1.  [SPL3SMP_E.005 Level 3 product](NASA_SMAP_SPL3SMP_E_005) 
     - This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. 
    
-        | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
+        | temporal resolution   | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | Daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product is highly accurate, within within 4%. <br> The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
+        | Daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product is highly accurate, within 4%. <br> The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
