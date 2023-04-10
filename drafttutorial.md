@@ -121,7 +121,7 @@ Band description                 | [NASA-USDA Enhanced SMAP](NASA_USDA_HSL_SMAP1
 
 In this section, you will learn ways to visualize SMAP in GEE based on your level of experience with the code editor.
 
-### EASY
+### No coding required
 This first option does not require coding expertise. You can access the [SMAP visualization application (beta)](https://krayon.users.earthengine.app/view/soil-moisture-active-passive-smap) 
 
 ### BEGINNER
@@ -153,6 +153,8 @@ Map.setCenter(-6.746, 46.529, 2);
 Map.addLayer(soilMoistureSurfaceAM, soilMoistureVis, 'Soil Moisture AM');
 Map.addLayer(soilMoistureSurfacePM, soilMoistureVis, 'Soil Moisture PM');
 ```
+
+## Analysis and vizualization of SMAP L3 product
 
 ### INTERMEDIATE
 
@@ -217,39 +219,46 @@ var exportParams = {scale: 10000, region: country, crs: 'EPSG:3857'};
 Export.image(SM_masked_MEAN, 'SM_MaskedJuly2022MEAN_URY', exportParams);
 Export.image(SM_MEAN, 'SM_July2022MEAN_URY', exportParams);
 ```
-### ADVANCED
 
-Plotting a time series of daily soil moisture
+## Plotting soil moisture over time with the SMAP L4 product
 
-Use separate sections for related, but discrete, groups of steps.
+### INTERMEDIATE
 
-Use code blocks to show users how to do something after describing it:
+Plotting a time series of daily surface and root zone soil moisture.
 
 ```js
-// plots SMAP L4 version 7, 3-hourly soil moisture over user-determined time period
-//Last edited by Karyn Tabor 01/10/2023
-var SMAPL4 = ee.ImageCollection("NASA/SMAP/SPL4SMGP/007_RAW")
+//Create single-day average of SMAP L4 version 7, 3-hourly soil moisture to view
+//Plot surface soil moisture and root zone soil moisture over user-determined time period
+//Last edited by Karyn Tabor 04/10/2023
+var SMAPL4 = ee.ImageCollection("NASA/SMAP/SPL4SMGP/007")
+//set long, lat of point of interest
 var point = ee.Geometry.Point([ -97.808804,34.975981,]);
-Map.setCenter(-97.808804,34.975981,  7);
+
+//draw point on map
 Map.addLayer(point,
              {'color': 'black'},
              'Geometry [black]: point');
+//zoom to point with zoom level 7
+Map.centerObject(point, 7);
+
+//Create vizualization parameters 
+var soilMoistureVis = {
+  min: 0.0,
+  max: 0.7,
+  palette: ['a67c00', 'FFE625', 'C2E5D3','90DCD0', '2FBDBD','0C9BBD','068682'],
+};
 
 //user input: set timeframe (June-July-August)
 var startdate = ('2022-06-01');
 var enddate = ('2022-08-31')
 
-// Load the input collection, filter by date, and select the soil moisture data.
+// Load the input collection, filter by date, and select the surface soil moisture data.
 var soilMoisture = SMAPL4.filter(ee.Filter.date(startdate,enddate)).select(['sm_surface','sm_rootzone']);
 
-var soilMoistureVis = {
-  min: 0.0,
-  max: 0.7,
-  palette: ['a67c00', 'FFE625', 'C2E5D3','90DCD0', '2FBDBD','0C9BBD','068682'],
-  //palette: ['ff0303','efff07','418504', '0300ff','8006f3'],
-};
 
+//select soil moisture for last day in time frame
 var soilMoisture1 = soilMoisture.filter(ee.Filter.date(enddate, enddate)).select(['sm_surface']);
+//create average soil moisture for the last day for visualization
 var soilMoisture_oneday = soilMoisture1.reduce(ee.Reducer.mean());
 Map.addLayer(soilMoisture.select('sm_surface'), soilMoistureVis, 'Soil Moisture');
 Map.addLayer(point,
@@ -279,33 +288,9 @@ var chart =
         });
 print(chart);
 ```
-## Calculating weekly soil moisture anomalies
 
-Use separate sections for related, but discrete, groups of steps.
+## Advanced Tutorial combining SMAP Enhanced NASA/USDA product with GPM Imerge to monitor drought
 
-Use code blocks to show users how to do something after describing it:
+Link to tutorial
 
-```js
-// Use comments to describe details that can't be easily expressed in code.
-// Always try making code more self descriptive before adding a comment.
-// Similarly, avoid repeating verbatim what's already said in code
-// (e.g., "assign ImageCollection to variable 'coll'").
-var coll = ee.ImageCollection('LANDSAT/LC08/C01/T1_TOA');
-```
-## Advanced tutorial
 
-Use separate sections for related, but discrete, groups of steps.
-
-Use code blocks to show users how to do something after describing it:
-
-```js
-// Use comments to describe details that can't be easily expressed in code.
-// Always try making code more self descriptive before adding a comment.
-// Similarly, avoid repeating verbatim what's already said in code
-// (e.g., "assign ImageCollection to variable 'coll'").
-var coll = ee.ImageCollection('LANDSAT/LC08/C01/T1_TOA');
-```
-### Use subsections if appropriate
-
-Consider breaking longer sections that cover multiple topics or span multiple
-pages into subsections.
