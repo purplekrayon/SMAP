@@ -84,7 +84,7 @@ There are three different SMAP products available in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy over sparsely vegetated areas but has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation. These areas can be masked using the retrieval quality flag bands. |
+        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy of estimating soil moisture (within 4%). The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -124,7 +124,7 @@ In this section, you will learn ways to visualize SMAP in GEE based on your leve
 ### No coding required
 This first option does not require coding expertise. You can access the [SMAP visualization application (beta)](https://krayon.users.earthengine.app/view/soil-moisture-active-passive-smap) 
 
-### BEGINNER
+### New to GEE
 
 ```js
 //View a single day of SMAP L3 data for both ascending and descending overpasses   
@@ -156,7 +156,7 @@ Map.addLayer(soilMoistureSurfacePM, soilMoistureVis, 'Soil Moisture PM');
 
 ## Analysis and visualization of SMAP L3 product
 
-### INTERMEDIATE
+### Intermediate
 
 ```js
 // This code selects the Soil Moisture AM band from L3 SMAP global soil moisture data 
@@ -222,7 +222,7 @@ Export.image(SM_MEAN, 'SM_July2022MEAN_URY', exportParams);
 
 ## Plotting soil moisture over time with the SMAP L4 product
 
-### INTERMEDIATE
+### Intermediate
 
 Plotting a time series of daily surface and root zone soil moisture.
 
