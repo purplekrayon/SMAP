@@ -289,7 +289,9 @@ var chart =
 print(chart);
 ```
 
-## Advanced Tutorial combining SMAP Enhanced NASA/USDA product with Global Precipitation Mission (GPM) IMERG to monitor drought
+## Drought monitoring with SMAP and Global Precipitation Mission (GPM) IMERG
+
+### Advanced
 
 [Click here to access the tutorial](https://github.com/google/earthengine-community/pull/651/files)
 
