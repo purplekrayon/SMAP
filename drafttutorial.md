@@ -84,7 +84,7 @@ There are three different SMAP products available in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness. The L3 surface soil moisture product has highy accuracy  over sparsely vegetated areas and grasslands, but has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation. These areas can be masked using the retrieval quality flag bands. |
+        | daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy over sparsely vegetated areas and grasslands, but has lower accuracy over densely forested areas due to the attenuation of soil-emitted radiation by vegetation. These areas can be masked using the retrieval quality flag bands. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -92,7 +92,7 @@ There are three different SMAP products available in the catalog.
     - The SMAP Level-4 (L4) Soil Moisture product includes surface soil moisture (0-5 cm vertical average), root-zone soil moisture (0-100 cm vertical average), and additional research products (not validated), including surface meteorological forcing variables, soil temperature, evapotranspiration, and net radiation.
         | temporal resolution | gridded resolutions | availability                   | uses         |
         |---------------------|---------------------|--------------------------------|---------------|
-        | daily               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and root zone soil moisture with full global coverage and no data gaps and high temporal frequency. These modeled data can be used over all land cover types except now and ice. |
+        | daily               | 11 km               | March 31, 2015 - present       | Modeled outputs of surface and root zone soil moisture with full global coverage and no data gaps and high temporal frequency. |
         
     - SMAP L4 provides uninterrupted soil moisture data.  During outages of the SMAP instrument, SMAP L4 soil moisture is based on land model simulations alone, without the concomitant assimilation of SMAP brightness temperature observations.  Significant SMAP instrument outages occurred between 19 June and 23 July 2019 and between 6 August and 20 September 2022.
 
