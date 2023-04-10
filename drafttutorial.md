@@ -289,8 +289,13 @@ var chart =
 print(chart);
 ```
 
-## Advanced Tutorial combining SMAP Enhanced NASA/USDA product with GPM IMERGE to monitor drought
+## Advanced Tutorial combining SMAP Enhanced NASA/USDA product with Global Precipitation Mission (GPM) IMERG to monitor drought
 
 [Click here to access the tutorial](https://github.com/google/earthengine-community/pull/651/files)
 
+## Resources
+
+[SMAP website](https://smap.jpl.nasa.gov/)
+
+[NASA ARSET SMAP training](https://appliedsciences.nasa.gov/join-mission/training/english/arset-applications-remote-sensing-soil-moisture-and)
 
