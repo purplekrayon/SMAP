@@ -47,7 +47,7 @@ After completing this tutorial, you will be able to choose the optimal SMAP prod
  
     | Frequency | Polarization           | Resolution                    | Relative accuracy |
     |-----------|------------------------|-------------------------------|-------------------|
-    | 1.41 Ghz  | H, V, 3rd & 4th Stokes | 36-km original, 9-km enhanced | 1.3 K             |
+    | 1.41 Ghz  | H, V | 36-km original, 9-km enhanced | 1.3 K             |
 
 
 - SMAP's radiometer collects naturally emitted energy from the surface with a 20-foot-wide mesh antenna that rotates 14 times per minute – the largest such spinning antenna in space. 
@@ -84,7 +84,7 @@ There are three different SMAP products available in the catalog.
    
         | temporal resolution.  | gridded resolutions   | availability                  | uses                                                           |
         |-----------------------|-----------------------|-------------------------------|----------------------------------------------------------------|
-        | Daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product has high accuracy of estimating soil moisture (within 4%). The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
+        | Daily                 | 9 km                  | March 31, 2015 - present      | L-band brightness temperature measures from this product can be used to analyze soil moisture, fine fuel moisture content, ocean salinity, and sea ice thickness.<br> The L3 surface soil moisture product is highly accurate, within within 4%. <br> The attenuation of soil-emitted radiation by vegetation limits the accuracy of the soil moisture estimates in densely forested areas, therefore masking the data with the retrieval quality flag bands is recommended. |
         
     - Data outages: June 19-July 23, 2019; September 20-October 6th, 2022
 
@@ -291,6 +291,6 @@ print(chart);
 
 ## Advanced Tutorial combining SMAP Enhanced NASA/USDA product with GPM IMERGE to monitor drought
 
-Link to tutorial
+[Click here to access the tutorial](https://github.com/google/earthengine-community/pull/651/files)
 
 
